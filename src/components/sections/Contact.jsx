@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 import sleepyBirdImage from '../../assets/images/bluebird.png'
 
@@ -9,6 +10,12 @@ const Contact = () => {
     subject: '',
     message: ''
   })
+  
+  const [status, setStatus] = useState({
+    submitting: false,
+    submitted: false,
+    error: null
+  })
 
   const handleChange = (e) => {
     setFormData({
@@ -17,10 +24,48 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
+    setStatus({ submitting: true, submitted: false, error: null })
+    
+    try {
+      const result = await emailjs.send(
+        'service_sl3h17m',
+        'template_2qsp5o7',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'beckjpeterson@gmail.com'
+        },
+        'II5iSaizwu5LRrvDF'
+      )
+      
+      console.log('Email sent successfully:', result)
+      setStatus({ submitting: false, submitted: true, error: null })
+      
+      // Clear form
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setStatus({ submitting: false, submitted: false, error: null })
+      }, 5000)
+      
+    } catch (error) {
+      console.error('Email send failed:', error)
+      setStatus({ 
+        submitting: false, 
+        submitted: false, 
+        error: 'Failed to send message. Please try again or email me directly.' 
+      })
+    }
   }
 
   return (
@@ -115,9 +160,21 @@ const Contact = () => {
                 ></textarea>
               </div>
               
-              <button type="submit" className="btn btn-primary">
-                Send Message
+              <button type="submit" className="btn btn-primary" disabled={status.submitting}>
+                {status.submitting ? 'Sending...' : 'Send Message'}
               </button>
+              
+              {status.submitted && (
+                <div className="form-message success">
+                  ✓ Message sent successfully! I'll get back to you soon.
+                </div>
+              )}
+              
+              {status.error && (
+                <div className="form-message error">
+                  ✗ {status.error}
+                </div>
+              )}
             </form>
           </div>
         </div>
