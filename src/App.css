@@ -1,0 +1,203 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Palette */
+  --bg-primary: #F8F6F1;      /* Very light tan */
+  --bg-secondary: #F0EDE4;    /* Slightly darker tan */
+  --text-primary: #2C2C2C;    /* Dark charcoal */
+  --text-secondary: #5A5A5A;  /* Medium gray */
+  --accent-primary: #2C5530;  /* Dark green */
+  --accent-secondary: #2C3E50; /* Dark blue */
+  --accent-warm: #D4A574;     /* Warm brown */
+  --accent-gold: #B8860B;     /* Muted gold */
+  
+  /* Layout */
+  --sidebar-width: 280px;
+  --sidebar-width-tablet: 240px;
+  
+  /* Typography - Clash Display + Space Grotesk */
+  --font-primary: 'Space Grotesk', 'Arial', sans-serif;
+  --font-secondary: 'Space Grotesk', 'Arial', sans-serif;
+  --font-display: 'Clash Display', 'Arial', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+  
+  /* Shadows */
+  --shadow-light: 0 2px 8px rgba(44, 53, 48, 0.1);
+  --shadow-medium: 0 4px 16px rgba(44, 53, 48, 0.15);
+  --shadow-heavy: 0 8px 32px rgba(44, 53, 48, 0.2);
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* App Container */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+/* Main Content */
+.main-content {
+  margin-right: var(--sidebar-width);
+  min-height: 100vh;
+  transition: margin-right 0.3s ease;
+}
+
+/* Section Styles */
+.section {
+  padding: var(--spacing-xl) 0;
+  position: relative;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.section-title {
+  font-family: 'Clash Display', 'Arial', sans-serif !important;
+  font-size: 3.5rem;
+  font-weight: 900 !important;
+  color: var(--accent-primary);
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  line-height: 1.2;
+}
+
+.title-flourish {
+  width: 400px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url('./assets/images/underswirl1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Typography */
+.lead-text {
+  font-family: 'Clash Display', 'Arial', sans-serif !important;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: 4px;
+  font-family: 'Space Grotesk', 'Arial', sans-serif !important;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: var(--shadow-light);
+}
+
+.btn-primary:hover {
+  background: var(--accent-secondary);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-right: var(--sidebar-width-tablet);
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-right: 0;
+    padding-top: 80px; /* Account for mobile header */
+  }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .lead-text {
+    font-size: 1.25rem;
+  }
+  
+  .section-content {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Styles */
+::selection {
+  background: var(--accent-primary);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--accent-primary);
+  color: white;
+}
+
