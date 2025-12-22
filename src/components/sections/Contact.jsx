@@ -77,7 +77,7 @@ const Contact = () => {
             <span className="annotation-text">this is harold →</span>
           </div>
           <div className="sleepy-bird-decoration">
-            <img src={sleepyBirdImage} alt="Sleepy bird" className="sleepy-bird-image" />
+            <img src={sleepyBirdImage} alt="Sleepy bird" className="sleepy-bird-image hand-drawn-element" />
           </div>
         </div>
         

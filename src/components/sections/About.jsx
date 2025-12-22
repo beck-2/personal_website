@@ -47,7 +47,7 @@ const About = () => {
           
                            <div className="about-visual">
                    <div className="cat-animation">
-                     <img src={catImage} alt="Animated cat" className="cat-image" />
+                     <img src={catImage} alt="Animated cat" className="cat-image hand-drawn-element" />
                    </div>
                  </div>
         </div>

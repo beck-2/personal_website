@@ -1,29 +1,34 @@
 import React from 'react'
 import './Projects.css'
-import vinesImage from '../../assets/images/vines.png'
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Quirky Web App",
-      description: "A delightful web application that showcases creative coding and retro design principles.",
-      tech: ["React", "CSS3", "JavaScript"],
-      image: "project-1"
+      title: "Applicant Tracking System",
+      description: "Designed with the UCLA club recruiting process in mind, this ATS allows club officers to create events, application forms, and track applicants all in one place.",
+      tech: ["React", "PostgreSQL", "JavaScript", "Node.js", "Express"],
+      image: "project-1",
+      liveLink: null,
+      githubLink: "https://github.com/beck-2/CS35L"
     },
     {
       id: 2,
       title: "Digital Art Gallery",
       description: "An interactive gallery for showcasing digital artwork with smooth animations.",
       tech: ["HTML5", "CSS3", "Vanilla JS"],
-      image: "project-2"
+      image: "project-2",
+      liveLink: null,
+      githubLink: null
     },
     {
       id: 3,
       title: "Retro Portfolio",
       description: "A vintage-inspired portfolio website with hand-drawn elements and smooth scrolling.",
       tech: ["React", "Styled Components", "Framer Motion"],
-      image: "project-3"
+      image: "project-3",
+      liveLink: null,
+      githubLink: null
     }
   ]
 
@@ -33,10 +38,6 @@ const Projects = () => {
         <div className="section-header">
           <h2 className="section-title">Projects</h2>
           <div className="title-flourish"></div>
-        </div>
-        
-        <div className="vines-decoration">
-          <img src={vinesImage} alt="Decorative vines" className="vines-image" />
         </div>
         
         <div className="projects-grid">
@@ -59,8 +60,16 @@ const Projects = () => {
                 </div>
                 
                 <div className="project-links">
-                  <button className="btn btn-primary">View Project</button>
-                  <button className="btn btn-secondary">Source Code</button>
+                  {project.liveLink && (
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                      View Project
+                    </a>
+                  )}
+                  {project.githubLink && (
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                      Source Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

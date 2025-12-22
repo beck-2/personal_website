@@ -98,6 +98,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 /* Typography */
@@ -199,5 +200,20 @@ html {
 ::-moz-selection {
   background: var(--accent-primary);
   color: white;
+}
+
+/* Custom Cursor for Hand-Drawn Elements */
+.hand-drawn-element {
+  cursor: pointer;
+}
+
+/* Star cursor active for entire session after clicking hand-drawn element */
+.star-cursor-active,
+.star-cursor-active *,
+.star-cursor-active button,
+.star-cursor-active a,
+.star-cursor-active input,
+.star-cursor-active textarea {
+  cursor: url('./assets/fullstar-cursor.png') 16 16, auto !important;
 }
 
