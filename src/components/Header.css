@@ -10,7 +10,7 @@
   backdrop-filter: blur(10px);
   border-left: 2px solid var(--accent-primary);
   border-radius: 12px 0 0 12px;
-  z-index: 1000;
+  z-index: 1001;
   box-shadow: var(--shadow-light);
   overflow-y: auto;
 }
@@ -26,8 +26,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
   border-bottom: 1px solid var(--accent-secondary);
 }
 
@@ -46,7 +46,7 @@
 .logo-flourish {
   width: 600px;
   height: 180px;
-  margin-top: var(--spacing-sm);
+  margin-top: 0;
   position: relative;
   background-image: url('../assets/images/underswirl2.png');
   background-size: contain;
