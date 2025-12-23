@@ -43,8 +43,7 @@ const Art = () => {
         
         <div className="art-intro">
           <p className="lead-text">
-            Beyond code, I explore digital art and creative expression. Here's a collection of my 
-            artistic experiments and visual explorations.
+            I'm great at being mediocre at a variety of things. I don't document most things I make, but here are some experiments with as many mediums as I can get my hands on
           </p>
         </div>
         

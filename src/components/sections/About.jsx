@@ -19,7 +19,7 @@ const About = () => {
             </p>
             
             <p>
-              I love exploring the intersection of the human brain and machine learning, robotics and art, or chocolate and coffee-- emphasis on that last combo. 
+              I love exploring the intersection of the human brain and machine learning, robotics and art, and chocolate and coffee-- emphasis on that last combo. 
               I also love to learn about anything odd, so please get in touch with me if you have a good book or fun animal fact you'd like to share.
               <br /><br /> Although I'm passionate about AI, all content on this site is hand-drawn/written by me.
             </p>

@@ -14,9 +14,9 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Digital Art Gallery",
-      description: "An interactive gallery for showcasing digital artwork with smooth animations.",
-      tech: ["HTML5", "CSS3", "Vanilla JS"],
+      title: "Video2Comic",
+      description: "Converts videos into comic strips with automatic frame selection and text bubble generation from audio. Featured on Deeplearning.AI",
+      tech: ["Yolov5", "Gemini API", "Python"],
       image: "project-2",
       liveLink: null,
       githubLink: null
