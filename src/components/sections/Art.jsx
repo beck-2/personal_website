@@ -5,31 +5,31 @@ const Art = () => {
   const artPieces = [
     {
       id: 1,
-      title: "Digital Dreams",
-      medium: "Digital Art",
+      title: "Astrophil",
+      medium: "Portfolio",
       year: "2024",
-      description: "A surreal exploration of digital landscapes and retro aesthetics."
+      description: "An exploration of our connection with stars and symbols of science, and an absolute nuisance as my first-ever portfolio."
     },
     {
       id: 2,
-      title: "Vintage Visions",
-      medium: "Mixed Media",
-      year: "2023",
-      description: "Combining traditional techniques with modern digital tools."
+      title: "My plants",
+      medium: "seeds and earth",
+      year: "2020 onwards",
+      description: "Homegrown: orchids and herbs \n UCLA: terrarium and vegetable-bed \n Tassajara: a little gardening, a LOT of killing invasive plants"
     },
     {
       id: 3,
-      title: "Pixel Poetry",
-      medium: "Pixel Art",
-      year: "2024",
-      description: "Minimalist pixel art exploring themes of nostalgia and technology."
+      title: "Framed up",
+      medium: "Photographs",
+      year: "",
+      description: "My neighbor-turned-grandma Zia is a wonderful photographer and teacher, and I still snap pics on her old Lumix camera."
     },
     {
       id: 4,
-      title: "Retro Rhythms",
-      medium: "Digital Illustration",
-      year: "2023",
-      description: "Dynamic illustrations inspired by vintage design and modern sensibilities."
+      title: "Notebook Snippets",
+      medium: "various sketches",
+      year: "ever-growing",
+      description: "I doodle everywhere, usually in margins and on top of old homework."
     }
   ]
 

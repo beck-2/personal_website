@@ -5,6 +5,7 @@ import About from './components/sections/About'
 import Projects from './components/sections/Projects'
 import Art from './components/sections/Art'
 import Contact from './components/sections/Contact'
+import ClickSpark from './components/ClickSpark'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className={`app ${starCursorActive ? 'star-cursor-active' : ''}`}>
+      <ClickSpark />
       <Header />
       <main className="main-content">
         <About />
