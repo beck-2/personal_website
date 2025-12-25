@@ -21,3 +21,21 @@ code {
 html {
   scroll-behavior: smooth;
 }
+
+/* Thinner scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F6F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7BA37D;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2c5530;
+}
